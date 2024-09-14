@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Urbanist", sans-serif;
+}
+/*
+::root{
+    --color-fondo:  #0f0f0f;
+    --color-primario: #fafafa;
+    --color-secundario: #3B0FDE;
+
+}*/
+
+.header {
+    width: 100%;
+    min-height: 600px;
+    background-color: #000000;
+    color: #fafafa;
+    margin-bottom: 60px;
+}
+
+.header-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    padding-top: 20px;
+}
+
+.header-logo {
+    width: 80px;
+}
+
+.header-icons{
+    scale: 1.8;
+}
+
+.header-icons i {
+    margin-left: 5px;
+}
+
+.offer {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.offer h2{
+    font-size: 40px;
+}
+
+.offer h4 {
+    margin-top: 20px;
+    font-weight: 400;
+    color: #afafaf;
+}
+
+.offer-button{
+    background-color: #3b0fde;
+    color: #fafafa;
+    width: 160px;
+    height: 45px;
+    border-radius: 30px;
+    border: none;
+
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.offer img {
+    width: 390px;
+    margin-top: 80px;
+}
+
+.products{
+    width: 100%;
+    min-height: 600px;
+    background-color: #fafafa;
+}
+
+.products h3 {
+    font-size: 30px;
+}
+
+.products-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+
+.products .spacing {
+    width: 120px;
+    height: 5px;
+    border-radius: 10px;
+    margin-top: 25px;
+    background-color: #3b0fde;
+}
