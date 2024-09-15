@@ -170,7 +170,7 @@
 .product-all-items .product-item{
     background-color: #fafafa;
     padding: 10px;
-    width: 205px;
+    max-width: 40%;
     max-height: 400px;
     margin: 0;
     margin-left: 2px;
@@ -183,7 +183,7 @@
 }
 
 .product-all-items .product-item img {
-    max-width: 195px;
+    width: 100%;
 }
 
 .product-all-items .product-item h4{
@@ -199,6 +199,7 @@
 .product-item i {
     margin-right: 4px;
     margin-top: 5px;
+    scale: 78%;
 }
 
 .banner {
@@ -217,37 +218,28 @@
     width: 100%;
 }
 
-.banner h2{
-    position: absolute;
-    padding: 20px;
-}
-
-.banner h2 {
-    top: 10px;
-    left: 0;
-    font-size: 50px;
-}
-
 .banner h5 {
     position: absolute;
-    bottom: 10px;
-    font-size: 50px;
+    bottom: 10%;
+    font-size: 2em;
     padding: 30px;
     font-weight: 300;
+    text-shadow: 4px 4px 10px rgba(0,0,0,1);
 }
 
 #banner-h5-1{
-    top:  10px;
+    top:  10%;
 }
 #banner-h5-2{
-    top: 80px;
+    top: 30%;
     right: 0;
 }
 #banner-h5-3{
-    bottom: 80px;
+    bottom: 30%;
 }
 
 #banner-h5-4{
-    bottom: 10px;
+    bottom: 10%;
     right: 0;
 }
+
