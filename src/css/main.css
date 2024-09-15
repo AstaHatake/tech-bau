@@ -92,17 +92,19 @@
     align-items: center;
     justify-content: center;
     font-weight: 400;
+    margin-top: 50px;
 }
 
 .products .spacing {
     width: 120px;
-    height: 5px;
+    height: 4px;
     border-radius: 10px;
     margin-top: 25px;
     margin-bottom: 40px;
     color: transparent;
     background-color: #3b0fde;
 }
+
 
 .product-items{
     width: 100%;
@@ -111,8 +113,10 @@
     justify-content: space-between;
     padding-right: 10px;
     overflow-y: hidden;
-    border-bottom: 4.5px solid #2b2b2b;
+    border-bottom: 0.2em solid #2b2b2b;
 }
+
+
 
 ::-webkit-scrollbar {
     width: 0; /* ancho del scroll bar */
@@ -135,6 +139,8 @@
     margin-right: 30px;
     width: 300px;
     max-height: 400px;
+    box-shadow: 0 8px 6px -6px rgba(104, 99, 99, 0.712);
+
 }
 
 .product-item img {
@@ -149,4 +155,99 @@
 
 .product-stars{
     color: rgb(238, 179, 18);
+}
+
+.product-all-items{
+    width: 100%;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.product-all-items .product-item{
+    background-color: #fafafa;
+    padding: 10px;
+    width: 205px;
+    max-height: 400px;
+    margin: 0;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 6px -6px rgba(104, 99, 99, 0.712);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-all-items .product-item img {
+    max-width: 195px;
+}
+
+.product-all-items .product-item h4{
+    color: #2b2b2b;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.product-all-items .product-stars{
+    color: rgb(238, 179, 18);
+}
+
+.product-item i {
+    margin-right: 4px;
+    margin-top: 5px;
+}
+
+.banner {
+    width: 100%;
+    background-color: #000000;
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fafafa;    
+    margin-top: 120px;
+}
+
+.banner img {
+    height: 100%;
+    width: 100%;
+}
+
+.banner h2{
+    position: absolute;
+    padding: 20px;
+}
+
+.banner h2 {
+    top: 10px;
+    left: 0;
+    font-size: 50px;
+}
+
+.banner h5 {
+    position: absolute;
+    bottom: 10px;
+    font-size: 50px;
+    padding: 30px;
+    font-weight: 300;
+}
+
+#banner-h5-1{
+    top:  10px;
+}
+#banner-h5-2{
+    top: 80px;
+    right: 0;
+}
+#banner-h5-3{
+    bottom: 80px;
+}
+
+#banner-h5-4{
+    bottom: 10px;
+    right: 0;
 }
