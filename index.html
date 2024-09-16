@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  id="body">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,9 @@
     <link rel="shortcut icon" href="src/images/logo.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/2dc2ccf70e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="  crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="  crossorigin=""></script>
+
 </head>
 <body>
     <header class="header">
@@ -328,6 +331,61 @@
         <h5 class="banner-h5" id="banner-h5-4">STREAMING</h5>
     </section>
 
+    <section class="map">
+        <h2>Ubicación</h2>
+        <h3 class="spacing">esto no se va a ver</h3>
+
+        
+        <div id="map" style="height: 200px;"></div>
+    </section>
+
+    <section class="partners">
+        <h2>Socios</h2>
+        <h3 class="spacing">esto no se va a ver</h3>
+
+        <div class="partners-images">
+            <img src="src/images/apple_logo_PNG19674.png" alt="">
+            <img src="src/images/play-logo.png" alt="" id="playstation">
+            <img src="src/images/samsung_logo_PNG2.png" id="samsung" alt="">
+            <img src="src/images/paypal_PNG19.png" alt="" id="paypal">
+            <img src="src/images/xbox-logo.png" alt="">
+            <img src="src/images/mastercard_PNG7.png" alt="">
+            <img src="src/images/amazon_PNG24.png" alt="">
+
+
+
+
+
+        </div>
+
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-col" id="">
+            <h2>
+                Descarga nuestra app
+            </h2>
+            <h6>Mejores productos a solo un click, disponible en Play Store y App Store.</h6>
+            <div class="footer-col-images">
+                <img src="src/images/playstore.png" alt="">
+                <img src="src/images/appstore.png" alt="">
+            </div>
+            <h6>Tienda de articulos de gaming, programing y office.</h6>
+
+        </div>
+        <div class="footer-col">
+            <h2>Contacto</h2>
+            <ul>
+                <li><i class="fa-brands fa-github"></i> GitHub</li>
+                <li><i class="fa-brands fa-linkedin"></i> Linkedin</li>
+                <li><i class="fa-brands fa-discord"></i> Discord</li>
+            </ul>
+        </div>
+        <div id="copyright">
+            © Daniel Marin 2024
+        </div>
+    </footer>
 
 <script src="src/js/script.js"></script>
 </body>
