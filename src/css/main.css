@@ -6,13 +6,11 @@
     box-sizing: border-box;
     font-family: "Urbanist", sans-serif;
 }
-/*
-::root{
-    --color-fondo:  #0f0f0f;
-    --color-primario: #fafafa;
-    --color-secundario: #3B0FDE;
 
-}*/
+:root{
+
+    --fuente-titulos: 30px;
+}
 
 
 .header {
@@ -25,6 +23,7 @@
 
 .header-title{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 60px;
@@ -84,7 +83,7 @@
 }
 
 .products h3 {
-    font-size: 30px;
+    font-size: var(--fuente-titulos);
 }
 
 .products-title{
@@ -115,21 +114,6 @@
     padding-right: 10px;
     overflow-y: hidden;
     border-bottom: 0.2em solid #2b2b2b;
-}
-
-::-webkit-scrollbar {
-    width: 0; /* ancho del scroll bar */
-    height: 0; /* alto del scroll bar */
-    background-color: transparent; /* background invisible */
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #ccc; /* color del thumb */
-  border-radius: 10px; /* radio de curvatura del thumb */
-}
-
-::-webkit-scrollbar-track {
-  background-color: transparent; /* background invisible */
 }
 
 .product-item{
@@ -328,8 +312,10 @@
 
 
 .partners-images img {
-    max-width: 110px;
-    max-height: 80px;
+    width: 120px;
+    height: 46px;
+    min-width: 70px;
+    min-height: 20px;
     margin-right: 40px;
 }
 
@@ -344,6 +330,11 @@
 
 #playstation{
     height: 70px;
+}
+
+#apple{
+    height: 100px;
+    min-width: 130px;
 }
 
 .footer {
@@ -422,4 +413,26 @@
     margin-top: 10px;
     margin-bottom: 20px;
     font-weight: 200;
+}
+
+/* Estilos para pantallas medianas */
+@media (min-width: 750px) and (max-width: 1024px) {
+    /* Estilos aquí */
+
+    .header-title {
+        margin-bottom: -50px;
+    }
+
+    .offer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .offer img{
+        width: 100%;
+    }
+
 }
