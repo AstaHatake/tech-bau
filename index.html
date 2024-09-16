@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  id="body">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,9 @@
     <link rel="shortcut icon" href="src/images/logo.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/2dc2ccf70e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="  crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="  crossorigin=""></script>
+
 </head>
 <body>
     <header class="header">
@@ -31,13 +34,16 @@
         </div>
     </header>
     
-    <section class="products">
+    <main class="products">
+
+        <!-- PRODUCTOS DESTACADOS -->
+
         <div class="products-title">
             <h3>Productos destacados</h3>
             <span class="spacing">...</span>
         </div>
 
-        <div class="product-items">
+        <section class="product-items">
             <div class="product-item">
                 <img src="src/images/power-tab.jpeg" alt="">
                 <h4>Tableta PC</h4>
@@ -48,8 +54,8 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-regular fa-star"></i>
                 </div>
-                <i class="fa-solid fa-dollar-sign"></i>
-                <span>120.23</span>
+                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>120.23</span>
             </div>
             <div class="product-item">
                 <img src="src/images/xbox-gaming.jpg" alt="">
@@ -61,8 +67,8 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-regular fa-star"></i>
                 </div>
-                <i class="fa-solid fa-dollar-sign"></i>
-                <span>600.93</span>
+                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>600.93</span>
             </div>
             <div class="product-item">
                 <img src="src/images/iphonex-phone.jpg" alt="">
@@ -74,8 +80,8 @@
                     <i class="fa-regular fa-star"></i>
                     <i class="fa-regular fa-star"></i>
                 </div>
-                <i class="fa-solid fa-dollar-sign"></i>
-                <span>230.20</span>
+                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>230.20</span>
             </div>
             <div class="product-item">
                 <img src="src/images/keyboard.jpg" alt="">
@@ -87,12 +93,299 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <i class="fa-solid fa-dollar-sign"></i>
-                <span>40.23</span>
+                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>40.23</span>
             </div>
+        </section>
+
+    
+        <!-- PRODUCTOS DESTACADOS -->
+
+        <div class="products-title">
+            <h3>Todos los productos</h3>
+            <span class="spacing">...</span>
+        </div>
+
+        <section class="product-all-items">
+            <div class="product-item">
+                <img src="src/images/canon-cam.jpg" alt="">
+                <h4>Canon 12X Pro Shoot</h4>
+                <div class="product-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>40.00</span>
+            </div>
+            <div class="product-item">
+                <img src="src/images/Alienware-laptop.png" alt="">
+                <h4>Alienware Laptop</h4>
+                <div class="product-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>310.10</span>
+            </div>
+            <div class="product-item">
+                <img src="src/images/xbox-game.jpg" alt="">
+                <h4>FIFA 2020</h4>
+                <div class="product-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>30.32</span>
+            </div>
+            <div class="product-item">
+                <img src="src/images/iphone9-phone.jpg" alt="">
+                <h4>Iphone 9</h4>
+                <div class="product-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>140.88</span>
+            </div>
+            <div class="product-item">
+                <img src="src/images/applepods.jpg" alt="">
+                <h4>Airpods</h4>
+                <div class="product-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>5.99</span>
+            </div>
+            <div class="product-item">
+                <img src="src/images/epson-projector.png" alt="">
+                <h4>Epson Projector</h4>
+                <div class="product-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>30.93</span>
+            </div>
+            <div class="product-item">
+                <img src="src/images/imac.jpg" alt="">
+                <h4>Imac PRO</h4>
+                <div class="product-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>133.20</span>
+            </div>
+            <div class="product-item">
+                <img src="src/images/superbass-speakers.jpg" alt="">
+                <h4>Super Bass Speakers</h4>
+                <div class="product-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                    <span>                 
+                    <i class="fa-solid fa-dollar-sign"></i>80.13</span>
+            </div>
+            <div class="product-item">
+                <img src="src/images/surfacepro-lap.jpg" alt="">
+                <h4>Surface PRO</h4>
+                <div class="product-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>170.32</span>
+            </div>
+            <div class="product-item">
+                <img src="src/images/thinkpad-laptop.jpg" alt="">
+                <h4>Thinkpad Laptop</h4>
+                <div class="product-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>300.53</span>
+            </div>
+            <div class="product-item">
+                <img src="src/images/thunderbolt.jpeg" alt="">
+                <h4>Iphone X</h4>
+                <div class="product-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>230.20</span>
+            </div>
+            <div class="product-item">
+                <img src="src/images/keyboard.jpg" alt="">
+                <h4>Logitech Super Slim</h4>
+                <div class="product-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>
+                    40.23
+                </span>
+            </div>
+            <div class="product-item">
+                <img src="src/images/ps4-headset.jpg" alt="">
+                <h4>PS4 Head Set</h4>
+                <div class="product-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>192.99</span>
+            </div>
+            <div class="product-item">
+                <img src="src/images/xbox-headset.jpg" alt="">
+                <h4>Xbox Headset</h4>
+                <div class="product-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>132.53</span>
+            </div>
+            <div class="product-item">
+                <img src="src/images/ps4-fortnite.jpg" alt="">
+                <h4>Fortnite PS4</h4>
+                <div class="product-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>73.14</span>
+            </div>
+            <div class="product-item">
+                <img src="src/images/falcon-drone.jpg" alt="">
+                <h4>Falcon Drone</h4>
+                <div class="product-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                                    <span>                  
+                    <i class="fa-solid fa-dollar-sign"></i>
+                    440.61
+                </span>
+            </div>
+        </section>
+
+    </main>
+
+    <section class="banner">
+        <img src="src/images/asus-banner.png" alt="">
+        <h5 class="banner-h5" id="banner-h5-1">PROGRAMING</h5>
+        <h5 class="banner-h5" id="banner-h5-2">OFFICE</h5>
+        <h5 class="banner-h5" id="banner-h5-3">GAMING</h5>
+        <h5 class="banner-h5" id="banner-h5-4">STREAMING</h5>
+    </section>
+
+    <section class="map">
+        <h2>Ubicación</h2>
+        <h3 class="spacing">esto no se va a ver</h3>
+
+        
+        <div id="map" style="height: 200px;"></div>
+    </section>
+
+    <section class="partners">
+        <h2>Socios</h2>
+        <h3 class="spacing">esto no se va a ver</h3>
+
+        <div class="partners-images">
+            <img src="src/images/apple_logo_PNG19674.png" alt="">
+            <img src="src/images/play-logo.png" alt="" id="playstation">
+            <img src="src/images/samsung_logo_PNG2.png" id="samsung" alt="">
+            <img src="src/images/paypal_PNG19.png" alt="" id="paypal">
+            <img src="src/images/xbox-logo.png" alt="">
+            <img src="src/images/mastercard_PNG7.png" alt="">
+            <img src="src/images/amazon_PNG24.png" alt="">
+
+
+
+
+
         </div>
 
     </section>
+
+
+    <footer class="footer">
+        <div class="footer-col" id="">
+            <h2>
+                Descarga nuestra app
+            </h2>
+            <h6>Mejores productos a solo un click, disponible en Play Store y App Store.</h6>
+            <div class="footer-col-images">
+                <img src="src/images/playstore.png" alt="">
+                <img src="src/images/appstore.png" alt="">
+            </div>
+            <h6>Tienda de articulos de gaming, programing y office.</h6>
+
+        </div>
+        <div class="footer-col">
+            <h2>Contacto</h2>
+            <ul>
+                <li><i class="fa-brands fa-github"></i> GitHub</li>
+                <li><i class="fa-brands fa-linkedin"></i> Linkedin</li>
+                <li><i class="fa-brands fa-discord"></i> Discord</li>
+            </ul>
+        </div>
+        <div id="copyright">
+            © Daniel Marin 2024
+        </div>
+    </footer>
 
 <script src="src/js/script.js"></script>
 </body>
