@@ -1,3 +1,123 @@
+/* VARIABLES PARA UTILIZAR EN EL JAVASCRIPT Y VARIABLES DEL DOM */
+
+let cartItems = []
+
+const cart = document.querySelector(".cart");
+
+const cartIcon = document.getElementById("cart-icon");
+
+
+let clickInCartIcon = false;
+
+/* FUNCIONES */
+    
+
+function addToCart (item) {
+    const nameItem = item.getElementsByTagName("H4")[0].textContent;
+    const priceItem = item.getElementsByTagName("SPAN")[0];
+    const imageItem = item.getElementsByTagName("IMG")[0].src;
+    const priceItemNUMBER = item.getElementsByTagName("SPAN")[0].textContent.match(/\d+(\.\d+)?/)[0]; 
+
+
+    let itemSave = {
+        "name" : nameItem,
+        "price" : priceItemNUMBER,
+        "quantity" : 1,
+        "image": imageItem
+    }
+
+    let existInCar = cartItems.some(itemCart => itemCart.name == itemSave.name);
+
+    if (existInCar) {
+        document.querySelector(".cart-itemsContainer").innerHTML = " ";
+
+        cartItems.forEach(cartItemSave =>{
+            if (cartItemSave.name == itemSave.name) {
+                if (cartItemSave.quantity < 10) {
+                    console.log(cartItemSave.price)
+                    console.log(itemSave.price)
+                    cartItemSave.quantity = parseInt(cartItemSave.quantity) + 1 ;
+                    cartItemSave.price = (parseFloat(cartItemSave.price) + parseFloat(itemSave.price)).toFixed(2);  
+                }
+            }
+            let cartItemSaveHTML = `
+                <div class="cart-item">
+                    <img src="${cartItemSave.image}" alt="" class="cart-item-image">
+                    <div class="cart-item-container">
+                        <h6>Nombre</h6>
+                        <h3 class="cart-item-name">${cartItemSave.name}  <span class="cart-item-quantity"> x ${cartItemSave.quantity}</span>
+                        </h3>
+                    </div>
+                    <div class="cart-item-container">
+                        <h6>Precio</h6>
+                        <h4 class="cart-item-price"><i class="fa-solid fa-dollar-sign"></i> ${cartItemSave.price}</h4>
+                    </div>
+                    <button class="cart-item-buttonDelete">ELIMINAR</button>
+                </div>  
+            `
+            document.querySelector(".cart-itemsContainer").innerHTML += cartItemSaveHTML;
+            
+        })
+    }
+
+    else {
+        cartItems.push(itemSave);
+        document.querySelector(".cart-itemsContainer").innerHTML = " ";
+        cartItems.forEach(cartItemSave =>{
+            let cartItemSaveHTML = `
+                <div class="cart-item">
+                    <img src="${cartItemSave.image}" alt="" class="cart-item-image">
+                    <div class="cart-item-container">
+                        <h6>Nombre</h6>
+                        <h3 class="cart-item-name">${cartItemSave.name}  <span class="cart-item-quantity"> x ${cartItemSave.quantity}</span>
+                        </h3>
+                    </div>
+                    <div class="cart-item-container">
+                        <h6>Precio</h6>
+                        <h4 class="cart-item-price"><i class="fa-solid fa-dollar-sign"></i> ${cartItemSave.price}</h4>
+                    </div>
+                    <button class="cart-item-buttonDelete">ELIMINAR</button>
+                </div>  
+            `
+            document.querySelector(".cart-itemsContainer").innerHTML += cartItemSaveHTML;
+            
+        })
+    }
+
+
+}  
+
+function hideCart (){
+    if (!clickInCartIcon) {
+        cartIcon.style.display = "none !important";
+        cartIcon.style.bottom = "230px"
+        cart.style.display = "flex";
+        cart.style.height = "200px";
+        cart.style.borderTop = "5px solid #000";
+        cart.style.backgroundColor = "#fafafa";
+        clickInCartIcon = true;
+    } else {
+        cartIcon.style.display = "none !important";
+        cartIcon.style.bottom = "10%"
+        cart.style.display = "flex";
+        cart.style.height = "0px";
+        cart.style.borderTop = "none";
+        cart.style.backgroundColor = "transparent";
+        clickInCartIcon = false;
+    }
+}
+
+/* EVENTOS CON EL DOM */
+
+cartIcon.addEventListener("click",()=>{
+    hideCart(clickInCartIcon);
+})
+
+
+
+
+/* MAPA */
+
 let map = L.map('map').setView([51.505, -0.09], 13);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -5,5 +125,5 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 L.marker([51.5, -0.09]).addTo(map)
-    .bindPopup('<h6><i class="fa-solid fa-shop"></i> Teach Buy</h6>')
+    .bindPopup('<h6 id="mark"><i class="fa-solid fa-shop"></i> Teach Buy</h6>')
     .openPopup();
