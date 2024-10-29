@@ -4,13 +4,14 @@ let cartItems = []
 
 const cart = document.querySelector(".cart");
 
-const cartIcon = document.querySelector("#cart-icon");
+let cartIcon = document.querySelector("#cart-icon");
 
 const cartIconResponsive = document.querySelector("#cart-icon-large");
 
 let total = 0;
 
 let clickInCartIcon = false;
+
 
 let wd = window.innerWidth;
 
@@ -79,6 +80,10 @@ function addToCart (item) {
         cartItems.push(itemSave);
         total = (parseFloat(total) + parseFloat(itemSave.price)).toFixed(2);   
         loadHTML();
+
+        if (clickInCartIcon){
+            cartIcon.innerHTML = `<h4>Total $${total}</h4>`
+        }  
     }
 
 
@@ -91,55 +96,55 @@ function deleteToCart(item) {
 }
 
 function hideCart (){
-    alert("asd")
     if (!clickInCartIcon ) {
-        if (wd <= 500){
-            cartIcon.classList.remove("fa-solid");
-            cartIcon.classList.remove("fa-cart-shopping");
-            cartIcon.classList.add("cart-icon-active")
-            cartIcon.innerHTML = `<h4>Total $${total}</h4>`
-            cart.style.display = "flex";
-            cart.style.height = "200px  !important";
-            cart.style.width = "100% !important"
+        cartIcon.classList.remove("fa-solid");
+        cartIcon.classList.remove("fa-cart-shopping");
+        cartIcon.classList.add("cart-icon-active");
+        cartIcon.innerHTML = `<h4>Total $${total}</h4>`;
+        cart.style.display = "flex";
+
+
+        if (wd < 500) {
+            cart.style.height = "200px";
+            cart.style.width = "100%"
             cart.style.borderTop = "5px solid #000";
+            cart.style.opacity = "1";
             cart.style.backgroundColor = "#fafafa";
+            cart.querySelector(".cart-itemsContainer").style.width = "100% !important";
             clickInCartIcon = true;
-        
         }
+
         if (wd > 500) {
-            cartIcon.classList.remove("fa-solid");
-            cartIcon.classList.remove("fa-cart-shopping");
-            cartIcon.classList.add("cart-icon-active")
-            cartIcon.innerHTML = `<h4>Total $${total}</h4>`
-            cart.style.display = "flex";
             cart.style.height = "100%";
-            cart.style.width = "70%";
-            cart.style.backgroundColor = "#fafafa71";
+            cart.style.width = "40%"
+            cart.style.opacity = "1";
+            cart.style.right = "0"
+            cart.style.backgroundColor = "rgba(255, 255, 255, 0.548)";
+            cart.querySelector(".cart-itemsContainer").style.width = "100% !important";
             clickInCartIcon = true;
-        
         }
 
     }
 
     else {
+        cart.style.height = "0px";
+        cart.style.width = "0px";
+
         cartIcon.classList.add("fa-solid");
         cartIcon.classList.add("fa-cart-shopping");
-        cartIcon.classList.remove("cart-icon-active");
-        cartIcon.innerHTML = ` `;
-        cartIcon.style.bottom = "10%"
-        cart.style.display = "flex";
-        cart.style.height = "0px";
-        cart.style.borderTop = "none";
-        cart.style.backgroundColor = "transparent";
+        cartIcon.classList.add("fa-cart-shopping");
+        cartIcon.classList.remove("cart-icon-active");    
+        cartIcon.innerHTML = " "
         clickInCartIcon = false;
-    
+
     }
+
 }
 
 /* EVENTOS CON EL DOM */
 
+
 cartIcon.addEventListener("click",()=>{
-    alert("asd")
     hideCart(clickInCartIcon);
 })
 
