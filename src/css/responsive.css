@@ -1,12 +1,18 @@
-@media (max-width: 330px) {
+@media (max-width: 500px) {
     :root{
 
         --fuente-titulos: 22px !important;
         
     }
 
+
+
     .offer h2{
         font-size: 38px !important;
+    }
+
+    .offer-text {
+        padding-left: 30px;
     }
 
     
@@ -39,7 +45,7 @@
 
 }
 
-@media (min-width: 330px) and (max-width: 750px) {
+@media (min-width: 500px) and (max-width: 750px) {
     /* Estilos aquí */
     :root{
         --fuente-titulos: 10px !important;
@@ -48,6 +54,8 @@
     .products-title h3{
         font-size: 24px;
     }
+
+    
 
     .product-all-items .product-item{
         max-width: 25%;
