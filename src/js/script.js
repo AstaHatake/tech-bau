@@ -91,49 +91,55 @@ function deleteToCart(item) {
 }
 
 function hideCart (){
-    if (!clickInCartIcon) {
-        if (wd < 600){
+    alert("asd")
+    if (!clickInCartIcon ) {
+        if (wd <= 500){
             cartIcon.classList.remove("fa-solid");
             cartIcon.classList.remove("fa-cart-shopping");
             cartIcon.classList.add("cart-icon-active")
             cartIcon.innerHTML = `<h4>Total $${total}</h4>`
             cart.style.display = "flex";
-            cart.style.height = "200px";
-            cart.style.width = "100%"
+            cart.style.height = "200px  !important";
+            cart.style.width = "100% !important"
             cart.style.borderTop = "5px solid #000";
-            cart.style.backgroundColor = "#fafafa71";
+            cart.style.backgroundColor = "#fafafa";
             clickInCartIcon = true;
+        
         }
-        else{
+        if (wd > 500) {
             cartIcon.classList.remove("fa-solid");
             cartIcon.classList.remove("fa-cart-shopping");
             cartIcon.classList.add("cart-icon-active")
             cartIcon.innerHTML = `<h4>Total $${total}</h4>`
             cart.style.display = "flex";
             cart.style.height = "100%";
-            cart.style.width = "40%"
+            cart.style.width = "70%";
             cart.style.backgroundColor = "#fafafa71";
             clickInCartIcon = true;
+        
         }
-    } else {
+
+    }
+
+    else {
         cartIcon.classList.add("fa-solid");
         cartIcon.classList.add("fa-cart-shopping");
         cartIcon.classList.remove("cart-icon-active");
-        cartIcon.innerHTML = ` `
+        cartIcon.innerHTML = ` `;
         cartIcon.style.bottom = "10%"
         cart.style.display = "flex";
         cart.style.height = "0px";
         cart.style.borderTop = "none";
         cart.style.backgroundColor = "transparent";
-    
         clickInCartIcon = false;
-        
+    
     }
 }
 
 /* EVENTOS CON EL DOM */
 
 cartIcon.addEventListener("click",()=>{
+    alert("asd")
     hideCart(clickInCartIcon);
 })
 

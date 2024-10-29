@@ -64,12 +64,12 @@
     }
 
     #cart-icon{
-        opacity: 0;
+        opacity: 1;
     }
 
     #cart-icon-large{
         background-color: #000000;
-        opacity: 1;
+        opacity: 0;
 
         color: #fafafa;
         padding: 10px;
@@ -163,6 +163,10 @@
 
     }
 
+    #cart-icon{
+        opacity: 1;
+    }
+
     #cart-icon-large{
         background-color: #000000;
         color: #fafafa;
@@ -170,7 +174,8 @@
         position: fixed;
         bottom: 10%; 
         right: 0;
-        opacity: 1;
+        opacity: 0;
+        display: flex;
         font-size: 15px;
         z-index: 4;
         border-radius: 50%;
